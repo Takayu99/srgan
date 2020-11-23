@@ -1,0 +1,29 @@
+SRGAN
+配布場所
+https://github.com/maru0804/SISR-Single-Image-Super-Resolution
+------------------------
+環境
+keras：2.2.4
+Tensorflow-gpu：1.5.0
+
+-----------------------------
+ファイルの種類
+train：resizeした画像を置いておく場所
+train1：訓練させたい画像を入れる
+output：超解像度化させた結果が出てくる
+crop : 画像を384×288にクリッピングさせたい画像を入れる
+test：テストさせたい画像（超解像度化させたい画像）を入れる。サイズは384×288
+images：学習中の様子が出力される
+original_img：ダウンロードしてきた画像を入れておく
+重み：作った重みファイルはここに保存しておく
+-----------------------------
+プログラムの種類
+srgan_Upsampling.ipynb
+：kerasのUPsamplingを使用したSRGANの手法
+resize.py
+：どんな画像も384×288に収めるプログラム
+
+ほかのプログラムは上記のURLを参照
+
+-----------------------------
+python google_images_download.py -ri -cd "chromedriver.exe" -l 120  -k "猫"
