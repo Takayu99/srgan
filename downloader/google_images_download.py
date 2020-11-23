@@ -354,7 +354,7 @@ class googleimagesdownload:
 
     #function to download single image
     def single_image(self,image_url):
-        main_directory = "downloads"
+        main_directory = "../../images/downloads"
         extensions = (".jpg", ".gif", ".png", ".bmp", ".svg", ".webp", ".ico")
         url = image_url
         try:
@@ -979,7 +979,7 @@ class googleimagesdownload:
         if arguments['output_directory']:
             main_directory = arguments['output_directory']
         else:
-            main_directory = "downloads"
+            main_directory = "../../images/downloads"
 
         # Proxy settings
         if arguments['proxy']:
