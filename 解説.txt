@@ -27,3 +27,7 @@ resize.py
 
 -----------------------------
 python google_images_download.py -ri -cd "chromedriver.exe" -l 120  -k "猫"
+
+
+
+sourcetreeの動作確認
