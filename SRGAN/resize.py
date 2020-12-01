@@ -6,14 +6,14 @@ import glob
 import os
 
 #読み取り先のフォルダ名
-files = glob.glob("raw_images/*")
+files = glob.glob("../../images/raw_images/*")
 #変換先のサイズ (768, 576)
 reW = 640 #764 
 reH = 480
 
 #書き出し先フォルダ
 try:
-    os.mkdir("resized_images")
+    os.mkdir("../../images/resized_images")
 except FileExistsError:
     pass
 
@@ -40,24 +40,24 @@ for f in files:
         if imgH > reH and imgW > reW:
             #左上
             img1 = img[0:reH, 0:reW]
-            f1 = "resized_images/" + str(count) + ".png"
+            f1 = "../../images/resized_images/" + str(count) + ".png"
             cv2.imshow("img",img1)
             cv2.waitKey(1)
             cv2.imwrite(f1,img1)
             count += 1
             #右上
             img2 = img[0:reH, imgW-reW:imgW]
-            f1 = "resized_images/" + str(count) + ".png"
+            f1 = "../../images/resized_images/" + str(count) + ".png"
             cv2.imwrite(f1,img2)
             count += 1
             #左下
             img3 = img[imgH-reH:imgH, 0:reW]
-            f1 = "resized_images/" + str(count) + ".png"
+            f1 = "../../images/resized_images/" + str(count) + ".png"
             cv2.imwrite(f1,img3)
             count += 1
             #右下
             img4 = img[imgH-reH:imgH, imgW-reW:imgW]
-            f1 = "resized_images/" + str(count) + ".png"
+            f1 = "../../images/resized_images/" + str(count) + ".png"
             cv2.imwrite(f1,img4)
             count += 1
 
@@ -77,7 +77,7 @@ for f in files:
             cv2.waitKey(1)
             
             #書き込み先のフォルダ
-            f1 = "resized_images/" + str(count) + ".png"
+            f1 = "../../images/resized_images/" + str(count) + ".png"
             cv2.imwrite(f1,dst)
             count += 1
 
